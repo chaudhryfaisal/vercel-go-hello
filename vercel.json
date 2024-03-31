@@ -1,0 +1,20 @@
+{
+  "public": false,
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/api/main.go"
+    }
+  ],
+  "functions": {
+    "api/*.go": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    }
+  }
+}
